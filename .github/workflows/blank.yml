@@ -33,3 +33,4 @@ jobs:
       - name: lint
         env: |
           POST_TITLE: ${{github.event.pull_request.title}}
+          run: echo $POST_TITLE
