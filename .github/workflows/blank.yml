@@ -24,5 +24,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        env: 
+          PR_TITLE: ${{github.event.pull_request.title}}
         run: |
-          echo ${{github.event.pull_request.title}}
+          echo "PR_TITLE"
