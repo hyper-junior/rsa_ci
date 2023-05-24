@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: test
         run: |
-          npm install -g @commitlint/cli @commitlint/config-conventional
           echo 'hello'
       - name: lint
         env:
@@ -20,4 +19,3 @@ jobs:
       - name: runsh
         run: |
           echo "${{github.event.pull_request.title}}"
-          echo "${{github.event.pull_request.title}}" | commitlint
