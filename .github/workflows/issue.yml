@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: test
         run: |
-          echo 'hello'
+          echo "${{ github.event.base }}"
       - name: rsa
         env:
           PR_TITLE: ${{ github.event.issuse.title }}
