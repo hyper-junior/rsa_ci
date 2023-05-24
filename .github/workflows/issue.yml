@@ -1,7 +1,7 @@
 name: PR
 
 'on':
-  [push,issues]
+  issues
 
 jobs:
   check-title:
@@ -11,7 +11,8 @@ jobs:
         run: |
           echo 'hello'
       - name: lint
-        run: |
-          echo "$PR_TITLE" 
         env:
           PR_TITLE: ${{github.event.issuse.title}}
+        run: |
+          echo "$PR_TITLE" 
+
