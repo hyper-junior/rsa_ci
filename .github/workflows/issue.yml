@@ -15,3 +15,6 @@ jobs:
           PR_TITLE: ${{ github.event.issuse.title }}
         run: |
           echo "$PR_TITLE" 
+      - name: rsa-2
+        run: |
+          echo "${{ github.event.issuse.title }}" 
