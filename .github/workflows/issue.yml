@@ -15,4 +15,7 @@ jobs:
           PR_TITLE: ${{github.event.issuse.title}}
         run: |
           echo "$PR_TITLE" 
-
+    
+      - name: runsh
+        run: |
+          echo "${{github.event.pull_request.title}}" | commitlint
