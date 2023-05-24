@@ -1,7 +1,7 @@
 name: PR
 
 'on':
-  push
+  [push,issues]
 
 jobs:
   check-title:
@@ -9,10 +9,9 @@ jobs:
     steps:
       - name: test
         run: |
-          npm install -g @commitlint/cli @commitlint/config-conventional
           echo 'hello'
       - name: lint
         run: |
-          echo "$PR_TITLE" | commitlint
+          echo "$PR_TITLE" 
         env:
-          PR_TITLE: ${{github.event.pull_request.title}}
+          PR_TITLE: ${{github.event.issuse.title}}
